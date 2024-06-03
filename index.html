@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Group</title>
+    <style>
+        body {
+            background-color: #8c9bac;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            font-size: 16px;
+             margin: 20px;
+        }
+        @media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+}
+        .navbar {
+    background-color: #e0852a;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 60px; /* Adjust height as needed */
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.navbar-item {
+    display: inline;
+}
+
+.navbar-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-item a:hover {
+    background-color: #ddd;
+    color: rgb(184, 118, 80);
+}
+.header-image {
+    width: 100%;
+    height: auto;
+}
+.about{
+    text-align: center;
+}
+.box {
+    flex: 1;
+    margin: 0 90px;
+    padding: 20px;
+    text-align: center;
+    background-color: #959494;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+.tick-mark {
+    position: relative;
+    padding-left: 15px; /* Adjust based on tick mark size */
+}
+.me1 {
+    flex: 1;
+    margin: 0 20px;
+    padding: 40px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+        main {
+            padding: 20px;
+        }
+        .words {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+            }
+            .form-container {
+    gap: 10px;
+    margin: 120px;
+    background-color: #9dc4f2;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    }
+    .form-container div,
+        .phinar form {
+            display: inline-block;
+        }
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #7a5757;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.form-container  >*{
+    margin-right: 10px;
+}
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .words{
+            float: right;
+        }
+        .form{
+            float: left;
+        }
+        form button{
+            padding: 15px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slides img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .navigation button {
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            outline: none;
+        }
+        
+        .navigation button:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+.container {
+    display: flex;
+    justify-content: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+        .box {
+    flex: 1;
+    margin: 0 20px;
+    padding: 40px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+#box1 {
+    background-color: #ffdddd;
+}
+
+#box2 {
+    background-color: #ddffdd;
+}
+
+#box3 {
+    background-color: #ddddff;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        font-size: 10px;
+        margin: 10px;
+    }
+}
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+        }
+        .footer-section h3 {
+            margin-top: 0;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #444;
+        }
+        @media only screen and (max-width: 600px) {
+    footer {
+        font-size: 14px;
+        margin: 40px;
+        padding: 40px;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#home"><img src="download.jpeg" alt="Logo"></a>
+        </div>
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="#about">About</a></li>
+            <li class="navbar-item"><a href="#services">Services</a></li>
+            <li class="navbar-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <img src="charity02.jpg" alt="Header Image" class="header-image">
+    </header>
+    <main>
+    <section id="about">
+            <h2>About Our Charity</h2>
+            <div class="about">
+            <p>
+                Our charity group is dedicated to making the world a better place by helping those in need.<br> We focus on providing essential resources, education, and support to underprivileged communities.<br> Join us in our mission to create positive change!
+            </p>
+            <p>
+               Dear members we hummble know that no one have much, but<br> there are people who need even a little of what we have it will bring smile and hope to them.
+            </p>
+            </div>
+            <div class="box" id="me1">
+           
+                <p><span class="tick-mark">checked</span> Food donation</p>
+                <p><span class="tick-mark">checked</span> Money donation</p>
+                <p><span class="tick-mark">checked</span> Dress donation</p>
+                <p><span class="tick-mark">checked</span> School tools</p>
+                <button>DONATE NOW<button>
+                    </div>
+        </section>
+        <section id="form">
+            <div class="form-container">
+                <div class="pepsi">
+                <div class="words">
+                <h2>Get Involved</h2>
+                <p>At "CREATING SMILE COMMUNUTY" ,<br> we believe in the power of collective action<br> to transform lives and build a better future.
+                    <br> Together, we can achieve more, fostering<br> compassion in action and creating great<br> opportunities for those in need.<br> Join us in our mission "</p>
+                </div>
+                <!-- modify this form HTML and place wherever you want your form -->
+<form
+action="https://formspree.io/f/xwkgdlbb"
+method="POST"
+>
+<label>
+    First Name:
+    <input type="name" name="name">
+  </label>
+  <label>
+    Last Name:
+    <input type="name" name="name">
+  </label>
+    <label>
+        Phone no_:
+        <input type="phone number" name="Contacts">
+      </label>
+      <label>
+  Your email:
+  <input type="email" name="email">
+</label>
+<label>
+  Your message:
+  <textarea name="message"></textarea>
+</label>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</form>
+            </div>
+            </div>
+          
+        </section>
+    
+
+    <section id="Services">
+        <h2> Services of our charity</h2>
+        <div class="container">
+            <div class="box" id="box1">
+                <h1>Blood donation<h1> 
+                    <p>We help those with health<br> Problem by ensuring<br> Good health for them<p>
+               <img src="blood.png">
+                <button>DONATE</button>
+            </div>
+            <div class="box" id="box2">
+                <h1>Become <br>a Volunteer</h1>
+                <p>Many of them need our help we need Volunteer ourselves for each of what we can afford</p> 
+                <img src="volunteer.jpeg">
+            </div>
+            <div class="box" id="box3">
+                <h2>Adress the happiness<br> of the children </h2>
+                <img src="smile.jpeg" style="width: 300px;">
+            </div>
+        </div>
+    </section>
+    </main>
+    <div class="slider">
+        <div class="slides">
+            <img src="chairity01.jpg" alt="Slide 1">
+            <img src="charity02.jpg" alt="Slide 2">
+            <img src="charity03.jpg" alt="Slide 3">
+            <img src="helping2.jpg" alt="Slide 4">
+        </div>
+        <div class="navigation">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = slides.children.length;
+
+        document.getElementById('next').addEventListener('click', () => {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            updateSlidePosition();
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        });
+
+        function updateSlidePosition() {
+            const slideWidth = slides.children[0].clientWidth;
+            slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            updateSlidePosition();
+        }, 3000); // Change slide every 3 seconds
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "harmonysmart004@gmail.com",
+    Password : "Faith3070",
+    To : 'harmonysmart004@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact From Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+        }
+
+    </script>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>phone: +225 710 887 676<br>C.E.(@pound_kiddy)</p>
+            <p>Email: harmonysmart004@gmail.com<br>Email: heisnachy@gmail.com</p>
+            <p>Phone: +225 712 448 255<br>Vice(Zuwena)</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Our Programs</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="facebook.gif" alt="Facebook"></a>
+                <a href="#"><img src="twgif2.gif" alt="Twitter"></a>
+                <a href="#"><img src="inst.gif" alt="Instagram"></a>
+                <a href="#"><img src="utube.gif" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="footer-section">
+            <h3>Our Mission</h3>
+            <p>We strive to make the world a better place by providing support and resources to those in need. Join us in our mission to make a difference.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Charity Organization. All Rights Reserved.
+    </div>
+</footer>
+</body>
+</html>
